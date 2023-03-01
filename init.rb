@@ -4,5 +4,5 @@ Redmine::Plugin.register :redmine_prometheus do
   description 'This is a plugin for Redmine integration witch prometheus'
   version '0.0.0'
   url 'https://github.com/7enSmile/redmine_prometheus'
-  author_url 'http://example.com/about'
+  author_url 'sema2012r@gmail.com'
 end
