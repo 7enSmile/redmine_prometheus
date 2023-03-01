@@ -1,8 +1,8 @@
-Redmine::Plugin.register :redmine_prometeus do
-  name 'Redmine Prometeus plugin'
-  author 'Author name'
-  description 'This is a plugin for Redmine'
-  version '0.0.1'
-  url 'http://example.com/path/to/plugin'
+Redmine::Plugin.register :redmine_prometheus do
+  name 'Redmine Prometheus integration plugin'
+  author 'Semen Pankratov'
+  description 'This is a plugin for Redmine integration witch prometheus'
+  version '0.0.0'
+  url 'https://github.com/7enSmile/redmine_prometheus'
   author_url 'http://example.com/about'
 end
