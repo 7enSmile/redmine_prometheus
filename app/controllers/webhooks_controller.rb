@@ -1,6 +1,6 @@
 class WebhooksController < ApplicationController
 skip_before_action :verify_authenticity_token
 	def init
-		head :ok
+		render json: request.body.read
 	end
 end
