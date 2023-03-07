@@ -1,10 +1,6 @@
 <%= form_tag({:controller => 'settings', :action => 'plugin', :id => 'my_plugin'}, :method => :post) do %>
 
-  <%= select_tag 'user', options_for_select(User.all.collect{ |u| [u.lastname, u.id] }) %>
-  <label>Assignee</label><br>
-  <br>
-  <%= select_tag 'project', options_for_select(Project.all.collect{ |u| [u.name, u.id] }) %>
-  <label>Project</label>
-  <br><br>
-  
+  <label>Assignee<%= select_tag 'user', options_for_select(User.all.collect{ |u| [u.lastname, u.id] }) %> </label><br>
+  <label>Project<%= select_tag 'project', options_for_select(Project.all.collect{ |u| [u.name, u.id] }) %></label><br>
+  <%= submit_tag 'Save' %>
 <% end %>
