@@ -1,4 +1,4 @@
-<%= form_tag({:controller => 'settings', :action => 'update', :id => 'redmine_prometheus'}, :method => :post) do %>
+<%= form_tag({:controller => 'settings', :action => 'my_plugin', :id => 'my_plugin'}, :method => :post) do %>
   <%= 'Assignee: ' %>
   <%= select_tag 'user', options_for_select(User.all.collect{ |u| [u.lastname, u.id] }) %>
   <br>
