@@ -1,1 +1,5 @@
-<%= select_tag 'priority', options_for_select([['High', 'high'], ['Medium', 'medium'], ['Low', 'low']]) %>
+<%= form_tag({:controller => 'settings', :action => 'plugin', :id => 'my_plugin'}, :method => :post) do %>
+  <%= label_tag :priority, 'Priority' %>
+  <%= select_tag 'priority', options_for_select([['High', 'high'], ['Medium', 'medium'], ['Low', 'low']]) %>
+  <%= submit_tag 'Save' %>
+<% end %>
