@@ -1,9 +1,9 @@
 <%= form_tag({:controller => 'settings', :action => 'plugin', :id => 'my_plugin'}, :method => :post) do %>
-  <%= select_tag 'priority', options_for_select(User.all.collect{ |u| [u.id, u.lastname] }) %>
+  <%= select_tag 'priority', options_for_select(User.all.collect{ |u| [u.lastname, u.id] }) %>
   <%= submit_tag 'Save' %>
 <% end %>
 
 <%= form_tag({:controller => 'settings', :action => 'plugin', :id => 'my_plugin'}, :method => :post) do %>
-  <%= select_tag 'priority', options_for_select([['High', 'high'], ['Medium', 'medium'], ['Low', 'low']]) %>
+  <%= select_tag 'priority', options_for_select(Project.all.collect{ |u| [u.name, u.id] }) %>
   <%= submit_tag 'Save' %>
 <% end %>
