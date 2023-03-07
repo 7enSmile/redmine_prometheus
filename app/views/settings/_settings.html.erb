@@ -1,9 +1,5 @@
-<%= form_tag({:controller => 'settings', :action => 'update'}, :method => :post) do %>
-  <%= 'Assignee: ' %>
-  <%= select_tag 'user', options_for_select(User.all.collect{ |u| [u.lastname, u.id] }) %>
-  <br>
-  <%= 'Project: ' %>
-  <%= select_tag 'project', options_for_select(Project.all.collect{ |u| [u.name, u.id] }) %>
-  <br>
-  <%= submit_tag 'Save' %>
-<% end %>
+<%= 'Project: ' %>
+<%= select_tag 'settings[project]', options_for_select(Project.all.collect{ |u| [u.name, u.id] }, settings['project']) %>
+<br>
+<%= 'Assignee: ' %>
+<%= select_tag 'settings[user_assignee]', options_for_select(User.all.collect{ |u| [u.lastname, u.id] }, settings['user_assignee']) %>
