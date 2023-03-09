@@ -1,5 +1,6 @@
 <%= 'Project: ' %>
-<%= select_tag 'settings[project]', options_for_select(Project.all.collect{ |u| [u.name, u.id] }, settings['project']) %>
+<%= select_tag 'settings[project]', options_for_select(Project.all.collect{ |u| [u.name, u.id] }, selected: if Setting.plugin_redmine_prometheus then settings['project'] else 1 end) %>
 <br>
 <%= 'Assignee: ' %>
-<%= select_tag 'settings[user_assignee]', options_for_select(User.all.collect{ |u| [u.lastname, u.id] }, settings['user_assignee']) %>
+<%= select_tag 'settings[user_assignee]', options_for_select(User.all.collect{ |u| [u.lastname, u.id] }, selected: if Setting.plugin_redmine_prometheus then settings['user_assignee'] else 1 end) %>
+
