@@ -16,7 +16,7 @@ skip_before_action :verify_authenticity_token
 			issue.save
 		else
 
-			issue_id = (Issue.where("subject LIKE ?", "%#{data["alerts"][0]["startsAt"][11, 8]}")).ids[0]
+			issue_id = (Issue.where("subject LIKE ?", "%#{data["alerts"][0]["startsAt"][11, 8]}")).where("start_date LIKE ?", data["alerts"][0]["startsAt"][0, 10]).ids[0]
 			issue = Issue.find_by_id(issue_id)
 			issue.status = IssueStatus.find_by_name("Closed")
 			issue.save
