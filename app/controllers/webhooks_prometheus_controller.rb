@@ -1,4 +1,4 @@
-class WebhooksController < ApplicationController
+class WebhooksPrometheusController < ApplicationController
 skip_before_action :verify_authenticity_token
 	def init
 		data = JSON.parse(request.body.read)
