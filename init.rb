@@ -5,5 +5,5 @@ Redmine::Plugin.register :redmine_prometheus do
   version '0.0.0'
   url 'https://github.com/7enSmile/redmine_prometheus'
   author_url 'http://example.com/about'
-  settings :partial => 'settings/settings'
+  settings :partial => 'settings/prometheus_settings'
 end
